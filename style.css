@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+    background: #2d3436;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 320px;
+}
+
+.display {
+    margin-bottom: 20px;
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 2.5rem;
+    text-align: right;
+    border: none;
+    border-radius: 10px;
+    background-color: #1e272e;
+    color: #00ff88;
+    font-weight: bold;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: default;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.number {
+    background-color: #636e72;
+    color: #fff;
+}
+
+.number:hover {
+    background-color: #74b9ff;
+}
+
+.operator {
+    background-color: #e17055;
+    color: #fff;
+}
+
+.operator:hover {
+    background-color: #ff7675;
+}
+
+.clear {
+    background-color: #d63031;
+    color: #fff;
+    grid-column: span 1;
+}
+
+.clear:hover {
+    background-color: #ff6b6b;
+}
+
+.delete {
+    background-color: #fd79a8;
+    color: #fff;
+}
+
+.delete:hover {
+    background-color: #ff9cc9;
+}
+
+.equals {
+    background-color: #00b894;
+    color: #fff;
+}
+
+.equals:hover {
+    background-color: #55efc4;
+}
+
+.zero {
+    grid-column: span 1;
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .btn {
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+    
+    #display {
+        font-size: 2rem;
+        padding: 15px;
+    }
+}
